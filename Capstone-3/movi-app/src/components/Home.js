@@ -1,18 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import MovieList from './components/MovieList';
-import MovieListHeading from './components/MovieListHeading';
-import SearchBox from './components/SearchBox';
-import AddFavourites from './components/AddFavourites';
-import RemoveFavourites from './components/RemoveFavourites';
-import Dashboard from '../Dashboard/Dashboard';
-import Preferences from '../Preferences/Preferences';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import MovieList from './MovieList';
+import MovieListHeading from './MovieListHeading';
+import SearchBox from './SearchBox';
+import AddFavourites from './AddFavourites';
+import RemoveFavourites from './RemoveFavourites';
 
-
-const App = () => {
-	const [movies, setMovies] = useState([]);
+const Home = () => {
+    const [movies, setMovies] = useState([]);
 	const [favourites, setFavourites] = useState([]);
 	const [searchValue, setSearchValue] = useState('');
 
@@ -59,9 +53,13 @@ const App = () => {
 		setFavourites(newFavouriteList);
 		saveToLocalStorage(newFavouriteList);
 	};
-
-	return (
-		<div className='container-fluid movie-app'>
+  return (
+    
+    <div>
+      <div className='container-fluid movie-app'>
+			<div className='row d-flex align-items-center mt-4 mb-4'>
+				<MovieListHeading heading='Movi' />
+			</div>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
 				<MovieListHeading heading='Movies' />
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
@@ -74,7 +72,7 @@ const App = () => {
 				/>
 			</div>
 			<div className='row d-flex align-items-center mt-4 mb-4'>
-				<MovieListHeading heading='Favourites' />
+				<MovieListHeading heading='Wishlist' />
 			</div>
 			<div className='row'>
 				<MovieList
@@ -84,7 +82,8 @@ const App = () => {
 				/>
 			</div>
 		</div>
-	);
-};
+    </div>
+  )
+}
 
-export default App;
+export default Home;

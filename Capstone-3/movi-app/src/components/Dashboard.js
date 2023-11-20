@@ -1,10 +1,12 @@
 import React from 'react';
+import Login from '../containers/Login';
 
 function Dashboard() {
 
   return(
 
-    <h2>Dashboard</h2>
+    <h2><Login /></h2>
+
 
   );
 
