@@ -10,6 +10,8 @@ const App = () => {
 		<Router>
 			<Routes>
 				<Route path="/" element={<Home />} />
+				<Route path="/login" element={<Dashboard />} />
+				
 			</Routes>
 		</Router>
 	);
