@@ -8,6 +8,7 @@ const bcrypt = require("bcrypt");
 const saltRounds = 10;
 
 const app = express();
+const PORT = process.env.PORT || 3306;
 
 app.use(express.json());
 app.use(
@@ -93,7 +94,7 @@ app.post("/login", (req, res) => {
   );
 });
 
-app.listen(3306, () => {
-  console.log("running server");
+app.listen(PORT, () => {
+  console.log(`running server on port ${PORT}`);
 });
 
