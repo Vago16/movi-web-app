@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+import './Login.css';
 
 const Login = () => {
 
@@ -39,40 +40,48 @@ const Login = () => {
       <h4>Sign up if you dont have an account yet!</h4>
       <div className='registration'>
         <h2>Registration</h2>
-        <label>Username</label>
-          <input type='text' 
-                  onChange={(e)=> {setUsernameReg(e.target.value);
-            }}  
-          />
-        <label>Password</label>
-        <input type='text' 
-                onChange={(e)=> {setPasswordReg(e.target.value);
-            }}  
-          />
-        <button onClick={register}> Register! </button>
+        <p>
+          <label>Username</label>
+            <input class='input' type='text' 
+                    onChange={(e)=> {setUsernameReg(e.target.value);
+              }}  
+            />
+            <br></br>
+          <label>Password</label>
+          <input class='input' type='text' 
+                  onChange={(e)=> {setPasswordReg(e.target.value);
+              }}  
+            />
+            <br></br>
+          <button class='button' onClick={register}> Register! </button>
+        </p>
       </div>
 
-      
+      <br></br>
       <h4>Log in to see all the movies!</h4>
       <div className='Login'>
         <h2>Login</h2>
-        <label>Username</label>
-          <input type='text'
-                  placeholder='Username?'
-                  onChange={(e) =>{
-                      setUsername(e.target.value);
-                  }}
-          />
-        <label>Password</label>
-        <input type='text'
-                  placeholder='Username?'
-                  onChange={(e) =>{
-                      setPassword(e.target.value);
-                  }}
-          />
-        <button onClick={loginFunc}> Login! </button>
+        <p>
+          <label>Username</label>
+            <input class='input' type='text'
+                    placeholder='Username?'
+                    onChange={(e) =>{
+                        setUsername(e.target.value);
+                    }}
+            />
+          <br></br>
+          <label>Password</label>
+          <input class='input' type='text'
+                    placeholder='Password?'
+                    onChange={(e) =>{
+                        setPassword(e.target.value);
+                    }}
+            />
+            <br></br>
+          <button class='button' onClick={loginFunc}> Login! </button>
+        </p>
       </div>
-      <h3>(logInStatus)</h3>
+      <h3>{logInStatus}</h3>
     </div>
   );
 }
