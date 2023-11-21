@@ -1,4 +1,4 @@
-Capstone Step Two: Proposal for Movi Web App
+Capstone 
 
 The tech stack I will be using for this project is React and Node.
 
@@ -21,5 +21,7 @@ C. Functionality will include but not limited to; strong data protection/encrypt
 D. User flow will be intuitive, going left to right and up to down to follow traditional reading.
 
 E. Features that will make the site more than a CRUD DB are the ability to interact with other users as a stretch goal.  Stretch goals include creating a keyword search to tag movies with that make them searchable by a keyword list that gets updated weekly or such with polling( ie basic mood words at first and then as the need for more specific comes up then those can get implemented too.
+
+https://movi-web-app.onrender.com/
 
 
