@@ -10,16 +10,16 @@ The website will let users create “wish lists” of movies they want to watch 
 
 The Movi website will be for movie lovers, with a focus on older genre defining films and vintage films maybe, and lets them browse according to genre, their likes, what their friends have watched, possibly keywords, and/or by search results.
 
-TMDB API https://developer.themoviedb.org/docs, the data will be collected using axios fetch.
+OMDB API
 
 A. I possibly might need to develop some of my own assets outside the API as I do not think it has everything I need.
 
-B. Sensitive information would be email and password.
+B. Sensitive information would be password.
 
-C. Functionality will include but not limited to; well-defined interface, strong data protection/encryption, fast loading time.
+C. Functionality will include but not limited to; strong data protection/encryption, fast loading time.
 
 D. User flow will be intuitive, going left to right and up to down to follow traditional reading.
 
-E. Features that will make the site more than a CRUD DB are the ability to interact with other users.  Stretch goals include creating a keyword search to tag movies with that make them searchable by a keyword list that gets updated weekly or such with polling( ie basic mood words at first and then as the need for more specific comes up then those can get implemented too.
+E. Features that will make the site more than a CRUD DB are the ability to interact with other users as a stretch goal.  Stretch goals include creating a keyword search to tag movies with that make them searchable by a keyword list that gets updated weekly or such with polling( ie basic mood words at first and then as the need for more specific comes up then those can get implemented too.
 
 
