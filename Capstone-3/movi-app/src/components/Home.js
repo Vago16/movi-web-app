@@ -62,6 +62,7 @@ const Home = () => {
 				<MovieListHeading heading='Movies' />
 				<SearchBox searchValue={searchValue} setSearchValue={setSearchValue} />
 			</div>
+			<p>Movies will start showing up as you type into the search bar! You can scroll horizontally to see more results.</p>
 			<div className='row'>
 				<MovieList
 					movies={movies}
@@ -72,6 +73,7 @@ const Home = () => {
 			<div className='row d-flex align-items-center mt-4 mb-4'>
 				<MovieListHeading heading='Wishlist' />
 			</div>
+			<p>Movies will start showing up here when you click the button on the movie logos to wishlist them! You can scroll horizontally to see more results.</p>
 			<div className='row'>
 				<MovieList
 					movies={favourites}
