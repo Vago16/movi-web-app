@@ -2,8 +2,6 @@ const express = require("express");
 const mysql = require("mysql");
 const cors = require("cors");
 
-const bodyParser = require("body-parser");
-const cookieParser = require("cookie-parser");
 const session = require("express-session");
 
 const bcrypt = require("bcrypt");
@@ -19,8 +17,6 @@ app.use(
     credentials: true,
   })
 );
-app.use(cookieParser());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(
   session({
@@ -37,8 +33,8 @@ app.use(
 const db = mysql.createConnection({
   user: "root",
   host: "localhost",
-  password: "password",
-  database: "LoginSystem",
+  password: "Yas343434*",
+  database: "movi_app2",
 });
 
 app.post("/register", (req, res) => {
@@ -97,7 +93,7 @@ app.post("/login", (req, res) => {
   );
 });
 
-app.listen(3001, () => {
+app.listen(3306, () => {
   console.log("running server");
 });
 
