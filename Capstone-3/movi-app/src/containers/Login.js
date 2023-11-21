@@ -1,91 +1,46 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import axios from 'axios';
 
-import PropTypes from 'prop-types';
+const Login = () => {
 
-async function loginUser(credentials) {
+  const [usernameReg, setUsernameReg] = useState('');
+  const [passwordReg, setPasswordReg] = useState('');
 
- return fetch('http://localhost:8080/login', {
-
-   method: 'POST',
-
-   headers: {
-
-     'Content-Type': 'application/json'
-
-   },
-
-   body: JSON.stringify(credentials)
-
- })
-
-   .then(data => data.json())
-
-}
-
-function Login({ setToken }) {
-
-  const [username, setUserName] = useState();
-
-  const [password, setPassword] = useState();
-
-  const handleSubmit = async e => {
-
-    e.preventDefault();
-
-    const token = await loginUser({
-
-      username,
-
-      password
-
+  const register = () => {
+    axios.post('http://localhost3001/', {
+      username: usernameReg, 
+      password: passwordReg
+    }).then((response)=> {
+        console.log(response);
     });
+  };
 
-    setToken(token);
-
-  }
-
-  return(
-
-    <div className="login-wrapper">
-
-      <h1>Please Log In</h1>
-
-      <form onSubmit={handleSubmit}>
-
-        <label>
-
-          <p>Username</p>
-
-          <input type="text" onChange={e => setUserName(e.target.value)} />
-
-        </label>
-
-        <label>
-
-          <p>Password</p>
-
-          <input type="password" onChange={e => setPassword(e.target.value)} />
-
-        </label>
-
-        <div>
-
-          <button type="submit">Submit</button>
-
-        </div>
-
-      </form>
-
+  return (
+    <div> 
+      <h4>Log in to see all the movies!</h4>
+      <div className='registration'>
+        <h2>Registration</h2>
+        <label>Username</label>
+          <input type='text' onChange={(e)=> {setUsernameReg(e.target.value);
+            }}  
+          />
+        <label>Password</label>
+        <input type='text' onChange={(e)=> {setPasswordReg(e.target.value);
+            }}  
+          />
+        <button onClick={register}> Register! </button>
+      </div>
+      <h4>Or sign up if you dont have an account yet!</h4>
+      <div className='Login'>
+        <h2>Login</h2>
+        <label>Username</label>
+          <input type='text' />
+        <label>Password</label>
+          <input type='text' />
+        <button> Register! </button>
+      </div>
     </div>
-
-  )
-
+  );
 }
-
-Login.propTypes = {
-
-  setToken: PropTypes.func.isRequired
-
-};
 
 export default Login;
