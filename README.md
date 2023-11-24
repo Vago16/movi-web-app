@@ -10,7 +10,8 @@ The website will let users create “wish lists” of movies they want to watch 
 
 The Movi website will be for movie lovers, with a focus on older genre defining films and vintage films maybe, and lets them browse according to genre, their likes, what their friends have watched, possibly keywords, and/or by search results.
 
-OMDB API
+OMDB API- To get access to the API used in this project, visit https://www.omdbapi.com/apikey.aspx, and if not at the screen to apply for an API key, at the top there should be a searchbar with the option to apply.  Enter in your email address and you should be sent an API key adn all data requests should be sent to http://www.omdbapi.com/?apikey=[yourkey]&
+
 
 A. I possibly might need to develop some of my own assets outside the API as I do not think it has everything I need.
 
@@ -23,5 +24,7 @@ D. User flow will be intuitive, going left to right and up to down to follow tra
 E. Features that will make the site more than a CRUD DB are the ability to interact with other users as a stretch goal.  Stretch goals include creating a keyword search to tag movies with that make them searchable by a keyword list that gets updated weekly or such with polling( ie basic mood words at first and then as the need for more specific comes up then those can get implemented too.
 
 https://movi-web-app.onrender.com/
+
+
 
 
