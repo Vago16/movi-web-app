@@ -2,3 +2,30 @@ ul {
     margin-left: 10px;
     flex-wrap: nowrap;
 }
+
+.navbar a{
+    background-color: #333;
+    overflow: hidden;
+  }
+  
+
+  .navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  
+  .navbar a {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  
+  .navbar a {
+    background-color: #04AA6D;
+    color: white;
+  }
