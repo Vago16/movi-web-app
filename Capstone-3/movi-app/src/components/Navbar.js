@@ -5,10 +5,10 @@ import './Navbar.css';
 const Navbar = () => {
   return (
     <div>
-      <ul className='row'>
+      <ul class='navbar'>
       
-				<Link to="/" >Home</Link>
-				<Link to="/login" >Dashboard</Link>
+				<a><Link to="/" >Home</Link></a>
+				<a><Link to="/login" >Dashboard</Link></a>
 			
       </ul>
     </div>
